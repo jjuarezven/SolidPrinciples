@@ -24,7 +24,21 @@
 
             var factory = new RaterFactory();
             var rater = factory.Create(policy, this);
-            rater?.Rate(policy);
+            // first step: original behavior printed Unknown policy type when policy type was unknown
+            //rater?.Rate(policy);
+
+            // second step: this null check breaks LSP 
+            //if (rater == null)
+            //{
+            //    Logger.Log("Unknown policy type");
+            //}
+            //else
+            //{
+            //    rater.Rate(policy);
+            //}
+
+            // third step: all policies are processed the same way
+            rater.Rate(policy);
 
             Logger.Log("Rating completed.");
         }
