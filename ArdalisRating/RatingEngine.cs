@@ -6,33 +6,46 @@
     /// </summary>
     public class RatingEngine
     {
-        public IRatingContext Context { get; set; } = new DefaultRatingContext();
+        private readonly ILogger _logger;
+        private readonly IPolicySource _policySource;
+        private readonly IPolicySerializer _policySerializer;
+        private readonly RaterFactory _raterFactory;
+
+        //public IRatingContext Context { get; set; }
         public decimal Rating { get; set; }
         // these properties were encapsulated inside the context
         //public ConsoleLogger Logger { get; set; } = new ConsoleLogger();
         //public FilePolicySource PolicySource { get; set; } = new FilePolicySource();
         //public JsonPolicySerializer PolicySerializer { get; set; } = new JsonPolicySerializer();
 
-        public RatingEngine()
+        public RatingEngine(ILogger logger, IPolicySource policySource, IPolicySerializer policySerializer, RaterFactory raterFactory)
         {
-            Context.Engine = this;
+            _logger = logger;
+            _policySource = policySource;
+            _policySerializer = policySerializer;
+            _raterFactory = raterFactory;
+            //Context = new DefaultRatingContext(_policySource, _policySerializer)
+            //{
+            //    Engine = this
+            //};
         }
 
         public void Rate()
         {
-            Context.Log("Starting rate.");
+            _logger.Log("Starting rate.");
 
-            Context.Log("Loading policy.");
+            _logger.Log("Loading policy.");
 
-            string policyJson = Context.LoadPolicyFromFile();
+            string policyString = _policySource.GetPolicyFromSource();
 
-            var policy = Context.GetPolicyFromJsonString(policyJson);
+            var policy = _policySerializer.GetPolicyFromString(policyString);
 
-            var rater = Context.CreateRaterForPolicy(policy, Context);
+            //var rater = Context.CreateRaterForPolicy(policy, Context);
+            var rater = _raterFactory.Create(policy);
 
-            rater.Rate(policy);
+            Rating = rater.Rate(policy);
 
-            Context.Log("Rating completed.");
+            _logger.Log("Rating completed.");
             #region old code before ISP
             //Logger.Log("Starting rate.");
 
