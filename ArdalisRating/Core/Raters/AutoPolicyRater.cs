@@ -1,4 +1,7 @@
-﻿namespace ArdalisRating
+﻿using ArdalisRating.Core.Interfaces;
+using ArdalisRating.Core.Models;
+
+namespace ArdalisRating.Core.Raters
 {
     public class AutoPolicyRater : Rater
     {

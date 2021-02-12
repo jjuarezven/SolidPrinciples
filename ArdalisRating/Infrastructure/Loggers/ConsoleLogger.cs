@@ -1,6 +1,7 @@
-﻿using System;
+﻿using ArdalisRating.Core.Interfaces;
+using System;
 
-namespace ArdalisRating
+namespace ArdalisRating.Infrastructure.Loggers
 {
     public class ConsoleLogger : ILogger
     {

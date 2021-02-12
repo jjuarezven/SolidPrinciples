@@ -1,6 +1,8 @@
-﻿using System;
+﻿using ArdalisRating.Core.Interfaces;
+using ArdalisRating.Core.Models;
+using System;
 
-namespace ArdalisRating
+namespace ArdalisRating.Core.Raters
 {
     public class RaterFactory
     {
@@ -15,7 +17,7 @@ namespace ArdalisRating
         {
             try
             {
-                return (Rater)Activator.CreateInstance(Type.GetType($"ArdalisRating.{policy.Type}PolicyRater"), new object[] { _logger });
+                return (Rater)Activator.CreateInstance(Type.GetType($"ArdalisRating.Core.Raters.{policy.Type}PolicyRater"), new object[] { _logger });
             }
             catch
             {

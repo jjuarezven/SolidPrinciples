@@ -1,8 +1,8 @@
 ﻿using ArdalisRating.Core.Interfaces;
 
-namespace ArdalisRating.Tests
+namespace ArdalisRating.Infrastructure.PolicySources
 {
-    public class FakePolicySource : IPolicySource
+    public class StringPolicySource : IPolicySource
     {
         public string PolicyString { get; set; } = "";
 

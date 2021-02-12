@@ -1,6 +1,8 @@
-﻿using System;
+﻿using ArdalisRating.Core.Interfaces;
+using ArdalisRating.Core.Models;
+using System;
 
-namespace ArdalisRating
+namespace ArdalisRating.Core.Raters
 {
     public class LifePolicyRater : Rater
     {

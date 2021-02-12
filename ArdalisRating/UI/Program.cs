@@ -1,4 +1,9 @@
-﻿using System;
+﻿using ArdalisRating.Core;
+using ArdalisRating.Core.Raters;
+using ArdalisRating.Infrastructure.Loggers;
+using ArdalisRating.Infrastructure.PolicySources;
+using ArdalisRating.Infrastructure.Serializers;
+using System;
 
 namespace ArdalisRating
 {

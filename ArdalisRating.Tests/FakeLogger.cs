@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using ArdalisRating.Core.Interfaces;
+using System.Collections.Generic;
 
 namespace ArdalisRating.Tests
 {

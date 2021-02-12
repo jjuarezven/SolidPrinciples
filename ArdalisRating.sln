@@ -7,6 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArdalisRating", "ArdalisRat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArdalisRating.Tests", "ArdalisRating.Tests\ArdalisRating.Tests.csproj", "{DE47402F-D430-4B74-8014-4BD74B872E0E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebRating", "WebRating\WebRating.csproj", "{FBBB5CBE-18B4-4BC3-B355-6B62DD6E0E45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{881865A3-425F-4D20-85CC-FA5C69BB7162}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Solid principles.docx = ..\..\Solid principles.docx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +28,10 @@ Global
 		{DE47402F-D430-4B74-8014-4BD74B872E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE47402F-D430-4B74-8014-4BD74B872E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE47402F-D430-4B74-8014-4BD74B872E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBBB5CBE-18B4-4BC3-B355-6B62DD6E0E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBB5CBE-18B4-4BC3-B355-6B62DD6E0E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBB5CBE-18B4-4BC3-B355-6B62DD6E0E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBB5CBE-18B4-4BC3-B355-6B62DD6E0E45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

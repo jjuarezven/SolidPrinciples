@@ -1,4 +1,4 @@
-﻿namespace ArdalisRating
+﻿namespace ArdalisRating.Core.Models
 {
 
     public enum PolicyType

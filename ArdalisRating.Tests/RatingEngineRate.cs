@@ -1,3 +1,7 @@
+using ArdalisRating.Core;
+using ArdalisRating.Core.Models;
+using ArdalisRating.Core.Raters;
+using ArdalisRating.Infrastructure.Serializers;
 using Newtonsoft.Json;
 using Xunit;
 

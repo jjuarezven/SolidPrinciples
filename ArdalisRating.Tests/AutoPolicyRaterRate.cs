@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using ArdalisRating.Core.Models;
+using ArdalisRating.Core.Raters;
+using System.Linq;
 using Xunit;
 
 namespace ArdalisRating.Tests

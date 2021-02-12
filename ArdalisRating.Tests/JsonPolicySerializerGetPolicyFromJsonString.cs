@@ -1,4 +1,6 @@
-﻿using Xunit;
+﻿using ArdalisRating.Core.Models;
+using ArdalisRating.Infrastructure.Serializers;
+using Xunit;
 
 namespace ArdalisRating.Tests
 {
